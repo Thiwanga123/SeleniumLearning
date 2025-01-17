@@ -84,6 +84,8 @@ public class Assignment {
 		/* FIRST TEST */
 		
 		// #1: TODO (ensure that the search bar is visible before accessing it)
+		shortWait.until(ExpectedConditions.visibilityOfElementLocated(By.name("q")));
+
 		// HINT: the search bar has attribute name="q"
 		try {
 			shortWait.until(ExpectedConditions.visibilityOfElementLocated(By.name("q")));
@@ -101,6 +103,8 @@ public class Assignment {
 		
 
 		// #3: TODO (ensure that the "RUN SPEED TEST" button is clickable)
+		shortWait.until(ExpectedConditions.elementToBeClickable(By.id("knowledge-verticals-internetspeedtest__test_button")));
+
 		// HINT: the button has attribute id="knowledge-verticals-internetspeedtest__test_button"
 		try {
 			shortWait.until(/*CODE FRAGMENT*/);
@@ -112,12 +116,15 @@ public class Assignment {
 		
 		
 		// #4: TODO (click the "RUN SPEED TEST" button by its "id" attribute)
+		driver.findElement(By.id("knowledge-verticals-internetspeedtest__test_button")).click();
 		driver.findElement(/*CODE FRAGMENT*/).click();
 
 		
 
 		
 		// #5: TODO (ensure that the "CANCEL" button is clickable directly after this)
+		shortWait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("g-raised-button[jsaction='dArJMd']")));
+
 		// HINT: the button is a tag <g-raised-button> with attribute jsaction="dArJMd"
 		try {
 			shortWait.until(/*CODE FRAGMENT*/);
@@ -129,6 +136,7 @@ public class Assignment {
 		
 
 		// #6: TODO (wait for the test to finish)
+		longWait.until(ExpectedConditions.invisibilityOfElementLocated(By.cssSelector("g-raised-button[jsaction='dArJMd']")));
 		// HINT: The "CANCEL" button should not be clickable. Is shortWait long enough?
 		try {
 			longWait.until(/*CODE FRAGMENT*/);
@@ -140,6 +148,7 @@ public class Assignment {
 		
 		
 		// #7: TODO ("RETRY" signifies a failure)
+		shortWait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("g-raised-button[jsaction='i0JLwd']")));
 		// HINT: the "RETRY" button is a tag <g-raised-button> with attribute jsaction="i0JLwd"
 		try {
 			shortWait.until(/*CODE FRAGMENT*/);
@@ -152,6 +161,7 @@ public class Assignment {
 		
 		
 		// #8: TODO ("TEST AGAIN" signifies a success)
+		shortWait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("g-raised-button[jsaction='iyDKIb']")));
 		// HINT: the "TEST AGAIN" button is a tag <g-raised-button> with attribute jsaction="iyDKIb"
 		try {
 			shortWait.until(/*CODE FRAGMENT*/);
